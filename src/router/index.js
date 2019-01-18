@@ -132,6 +132,33 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/city',
+    component: Layout,
+    redirect: '/city/menu1',
+    name: 'city',
+    meta: {
+      title: '城市',
+      icon: 'city'
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/city/list'), // Parent router-view
+        name: 'city-list',
+        meta: {
+          title: '城市列表',
+          icon: 'list'
+        }
+      },
+      {
+        path: 'menu2',
+        component: () => import('@/views/city/add'),
+        meta: { title: '添加城市',icon: 'add' }
+      }
+    ]
+  },
+
+  {
     path: 'external-link',
     component: Layout,
     children: [
