@@ -9,7 +9,7 @@
 			</el-form-item>
 
 			<el-form-item>
-				<el-button type="primary" @click="submit">添加</el-button>
+				<el-button type="primary" @click="submit" v-loading="loading">添加</el-button>
 			</el-form-item>
 		</el-form>
 	</el-card>
@@ -20,19 +20,21 @@
 	export default {
 		data() {
 			return {
-				city: '深圳'
+				city: '深圳',
+				loading: false
 			}
 		},
 		methods: {
 			submit(){
-				this.listLoading = true;
+				this.loading = true;
 				try {
 					 add(this.city).then(res=> {
-					console.log(res);
-					this.listLoading = false
+						 this.$router.push('/city/list');
+					this.loading = false
 				});
 				} catch (error) {
 					console.log(error);
+					this.loading = false;
 				}
        
 			}

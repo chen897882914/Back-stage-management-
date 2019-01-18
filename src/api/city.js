@@ -16,3 +16,11 @@ export const add = (city) => {
     }
   })
 }
+
+export const del = (id) => {
+  return request({
+    url: '/city/delById',
+    method: 'get',
+    params: { id }
+  })
+}
