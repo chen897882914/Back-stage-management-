@@ -25,8 +25,9 @@ html {
 #app {
   height: 100%;
 }
+
 .app-main {
-    padding: 20px 30px;
+  padding: 20px 30px;
 }
 
 
@@ -88,3 +89,75 @@ a:hover {
   height: 30px;
   width: 30px;
 }
+
+// (2) bfc
+.ovh {
+  overflow: hidden;
+}
+
+.ova {
+  overflow: auto;
+}
+
+// (3) display
+.inb {
+  display: inline-block;
+}
+
+.dsn {
+  display: none;
+}
+
+// (4) 定位
+.fixed {
+  position: fixed;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+// (6)加粗
+.fw400 {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: bold; // 900
+}
+
+// (7)居中
+.tac {
+  text-align: center;
+}
+
+// (8) 行高
+.lh15 {
+  line-height: 1.5;
+}
+
+// (9) 盒模型
+.bzb {
+  box-sizing: border-box;
+}
+
+// (10) 手形光标
+.cp {
+  cursor: pointer;
+}
+
+.f999 {
+  color: #999;
+}
+
+.f18 {font-size:18px;}
+.f20 {font-size:20px;}
+.f22 {font-size:22px;}
+.f24 {font-size:24px;}
+.f26 {font-size:26px;}
+.f28 {font-size:28px;}
+.f30 {font-size:30px;}

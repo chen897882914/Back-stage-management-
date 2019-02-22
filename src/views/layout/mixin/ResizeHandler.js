@@ -13,14 +13,16 @@ export default {
     }
   },
   beforeMount() {
-    window.addEventListener('resize', this.resizeHandler)
+    // window.addEventListener('resize', this.resizeHandler)
   },
   mounted() {
-    const isMobile = this.isMobile()
-    if (isMobile) {
-      store.dispatch('ToggleDevice', 'mobile')
-      store.dispatch('CloseSideBar', { withoutAnimation: true })
-    }
+    // const isMobile = this.isMobile()
+    // if (isMobile) {
+    //   store.dispatch('ToggleDevice', 'mobile')
+    //   store.dispatch('CloseSideBar', { withoutAnimation: true })
+    // }
+    // 不改变窗口大小
+    store.dispatch('ToggleDevice', 'desktop')
   },
   methods: {
     isMobile() {
