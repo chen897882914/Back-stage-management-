@@ -2,12 +2,13 @@ import request from '@/utils/request'
 // 属性说明
 const attrDesc = {
   cityId: '城市id',
-  // city: '城市名称',
+  cityName: '城市名称',
   name: '区域名称'
 }
 
-const formData = {
+const form = {
   cityId: '',
+  cityName: '',
   name: ''
 }
 
@@ -45,7 +46,7 @@ const getDetail = districtId => {
 }
 
 export default {
-  formData,
+  form,
   attrDesc,
   add,
   getDetail,

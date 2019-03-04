@@ -22,10 +22,16 @@ const router = {
       }
     },
     {
-      path: 'add/:cinemaId',
-      hidden: true,
+      path: 'add',
+      // hidden: true,
       component: () => import('@/views/film/add'),
       meta: { title: '添加影片', icon: 'add' }
+    },
+    {
+      path: 'edit/:filmId',
+      // hidden: true,
+      component: () => import('@/views/film/edit'),
+      meta: { title: '编辑影片', icon: 'add' }
     },
     {
       path: 'detail',

@@ -14,7 +14,7 @@ const attrDesc = {
   salePrice: '售价'
 }
 
-const formData = {
+const form = {
   filmId: '',
   payDay: '2019-01-19',
   advanceStopMins: 15,
@@ -63,7 +63,7 @@ const getDetail = id => {
 }
 
 export default {
-  formData,
+  form,
   attrDesc,
   add,
   getDetail,

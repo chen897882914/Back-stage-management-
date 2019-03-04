@@ -6,7 +6,7 @@ const attrDesc = {
   // isHot: '热门城市'
 }
 
-const formData = {
+const form = {
   cityId: '',
   isHot: false,
   name: '',
@@ -47,7 +47,7 @@ const getDetail = cityId => {
 }
 
 export default {
-  formData,
+  form,
   attrDesc,
   add,
   getDetail,

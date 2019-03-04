@@ -11,7 +11,7 @@
         <template slot-scope="scope">
           <el-button @click="del(scope.row)" type="text" size="small">删除</el-button>
           <el-button type="text" size="small">
-            <router-link :to="`/district/add/${scope.row.cityId}`">添加区域</router-link>
+            <router-link :to="`/district/add/${scope.row.cityId}/cityName/${scope.row.name}`">添加区域</router-link>
           </el-button>
         </template>
       </el-table-column>

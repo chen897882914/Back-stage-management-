@@ -18,7 +18,7 @@
 		data() {
 			return {
 				attrDesc: model.attrDesc,
-				film: model.formData,
+				film: model.form,
 				loading: false,
 			}
 		},
@@ -30,7 +30,7 @@
 			async getDetail(id) {
 				try {
 						const res = await model.getDetail(id);
-						this.formData = res.data.film;
+						this.form = res.data.film;
 						
 				} catch(err) {
 					console.log(err);

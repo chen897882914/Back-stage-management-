@@ -46,7 +46,7 @@ export default {
       this.loading = true;
       try {
         const res = await model.getList();
-        this.list = res.data.districts;
+        this.list = res.districts;
         this.loading = false;
       } catch (error) {
         console.log(error);
@@ -55,7 +55,6 @@ export default {
     },
 
     formatter(row, column, cellValue, index) {
-      console.log(row);
       return row.isHot == 1 ? "是" : "否";
     },
 

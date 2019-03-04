@@ -17,7 +17,7 @@ const router = {
       component: () => import('@/views/district/list')
     },
     {
-      path: 'add/:cityId',
+      path: 'add/:cityId/cityName/:cityName',
       hidden: true,
       name: 'district-add',
       component: () => import('@/views/district/add'),

@@ -5,11 +5,11 @@
     </div>
     <el-form ref="form" action method="post" style="width:80%">
       <el-form-item v-for="(value,key) in attrDesc" :label="value" label-width="120px" :key="key">
-        <el-input v-model="formData[key]" :placeholder="`请输入${value}`"></el-input>
+        <el-input v-model="form[key]" :placeholder="`请输入${value}`"></el-input>
       </el-form-item>
       <!--图片上传-->
       <el-form-item label="logo图片" label-width="120px" class="rel">
-        <el-input v-model="formData['logoUrl']" placeholder="请输入图片地址"></el-input>
+        <el-input v-model="form['logoUrl']" placeholder="请输入图片地址"></el-input>
         <el-upload
           class="uploader"
           action="http://localhost:3000/upload"
@@ -18,7 +18,7 @@
         >
           <i class="el-icon-upload f24 avatar-uploader-icon vam"></i>
           <span class="vam">上传图片</span>
-          <img class="preview vam" :src="formData['logoUrl']">
+          <img class="preview vam" :src="form['logoUrl']">
         </el-upload>
       </el-form-item>
 
@@ -35,24 +35,24 @@ export default {
   data() {
     return {
       attrDesc: model.attrDesc,
-      formData: model.formData,
+      form: model.form,
       loading: false
     };
   },
   created() {
     console.log(model);
-    this.formData.districtId = this.$route.params.districtId;
+    this.form.districtId = this.$route.params.districtId;
   },
   methods: {
     handleUpload(res) {
       console.log(this);
-      this.formData.logoUrl = "http://localhost:3000" + res.imgUrl;
+      this.form.logoUrl = "http://localhost:3000" + res.imgUrl;
     },
 
     submit() {
       this.loading = true;
       try {
-        model.add(this.formData).then(res => {
+        model.add(this.form).then(res => {
           //						 this.$router.push('/film/list');
           this.loading = false;
         });

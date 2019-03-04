@@ -14,6 +14,9 @@ import store from './store'
 
 import '@/icons' // icon
 import '@/permission' // permission control
+import axios from 'axios'
+
+Vue.prototype.axios = axios
 
 Vue.use(ElementUI, {
   locale

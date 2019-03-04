@@ -18,7 +18,7 @@
 		data() {
 			return {
 				attrDesc: model.attrDesc,
-                cinema: model.formData,
+                cinema: model.form,
 				loading: false,
 			}
 		},
