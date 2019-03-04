@@ -1,17 +1,15 @@
-// <template>//
-  <el-card class="box-card">//
+ <template>
+  <el-card class="box-card">
     <div slot="header">
-      //
       <span>添加电影</span>
-      //
-    </div>//
-    <el-form ref="form" action method="post" style="width:50%">//
-      <Form :form="form" :attrDesc="attrDesc"></Form>//
-      <el-form-item style="text-align: center;">//
-        <el-button type="primary" @click="submit" v-loading="loading">提交</el-button>//
-      </el-form-item>//
-    </el-form>//
-  </el-card>//
+    </div>
+    <el-form ref="form" action method="post" style="width:50%">
+      <Form :form="form" :attrDesc="attrDesc"></Form>
+      <el-form-item style="text-align: center;">
+        <el-button type="primary" @click="submit" v-loading="loading">提交</el-button>
+      </el-form-item>
+    </el-form>
+  </el-card>
 </template>
 
 // <script type="text/javascript">
