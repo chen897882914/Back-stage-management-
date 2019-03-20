@@ -58,8 +58,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: 'admin'
+        username: '',
+        password: ''
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -72,7 +72,7 @@ export default {
   },
   mounted() {
   		// 自动登录
-  		this.handleLogin();
+  		// this.handleLogin();
   },
   watch: {
     $route: {
