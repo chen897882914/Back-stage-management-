@@ -31,30 +31,33 @@ import cinemaRouter from './modules/cinemaRouter'
 import scheduleRouter from './modules/scheduleRouter'
 export const constantRouterMap = [
   {
+    path: '/',
+    component: Layout,
+    redirect: '/index',
+    name: 'index',
+    children: [
+      {
+        path: 'index',
+        meta: {
+          title: '卖座后台管理系统',
+          icon: 'home'
+        },
+        component: () => import('@/views/dashboard/index')
+      }
+    ]
+  },
+  {
     path: '/login',
     component: () => import('@/views/login/index'),
     hidden: true
   },
-  { path: '/404', component: () => import('@/views/404'), hidden: true },
+
   cityRouter,
   districtRouter,
   cinemaRouter,
   filmRouter,
   scheduleRouter,
   demoRouter,
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/dashboard',
-    name: 'index',
-    hidden: true,
-    children: [
-      {
-        path: 'dashboard',
-        component: () => import('@/views/dashboard/index')
-      }
-    ]
-  },
   { path: '*', redirect: '/404', hidden: true }
 ]
 

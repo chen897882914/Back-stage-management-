@@ -4,6 +4,9 @@
       <span>添加城市</span>
     </div>
     <el-form ref="form" style="width:60%">
+      <el-form-item label="城市Id" label-width="120px">
+        <el-input v-model="cityId" placeholder=""/>
+      </el-form-item>
       <el-form-item label="城市名称" label-width="120px">
         <el-input v-model="name" placeholder="请输入城市名称"/>
       </el-form-item>
@@ -26,28 +29,32 @@ import $http from '@/utils/http';
 export default {
   data() {
     return {
-      name: '深圳',
-      pinyin: 'shenzhen',
+      cityId: '',
+      name: '',
+      pinyin: '',
       isHot: false,
       loading: false
     };
   },
   created() {
-
+    this.cityId = this.$route.params.cityId;
+    this.getCityDetail();
   },
   methods: {
-    submit() {
-      this.loading = true;
-      const url = '/city/add';
+    getCityDetail() {
+      const url = '/city/findById';
       const data = {
-        name: this.name,
-        pinyin: this.pinyin,
-        isHot: this.isHot
+        cityId: this.cityId
       };
       $http.post(url, data).then(res => {
-        this.$router.push('/city/list');
+        this.name = res.data.city.name;
+        this.pinyin = res.data.city.pinyin;
+        this.isHot = !!res.data.city.isHot;
         this.loading = false;
       });
+    },
+    submit() {
+      this.loading = true;
     }
   }
 };

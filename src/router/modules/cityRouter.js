@@ -1,6 +1,6 @@
 /** When your routing table is too long, you can split it into small modules**/
 
-import Layout from '@/views/layout/Layout'
+import Layout from '@/views/layout/Layout';
 // 城市
 const router = {
   path: '/city',
@@ -23,10 +23,18 @@ const router = {
     },
     {
       path: 'add',
+      name: 'add city',
       component: () => import('@/views/city/add'),
       meta: { title: '添加城市', icon: 'add' }
+    },
+    {
+      path: 'edit/:cityId',
+      hidden: true,
+      name: 'edit city',
+      component: () => import('@/views/city/edit'),
+      meta: { title: '编辑城市', icon: 'edit' }
     }
   ]
-}
+};
 
-export default router
+export default router;

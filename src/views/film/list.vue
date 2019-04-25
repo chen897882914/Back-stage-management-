@@ -110,7 +110,6 @@ export default {
         this.list = res.films;
         this.loading = false;
       } catch (error) {
-        debugger;
         this.loading = false;
       }
     },
