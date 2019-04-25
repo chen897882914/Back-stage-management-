@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import $http from '@/utils/http';
+import $http from "@/utils/http";
 export default {
   data() {
     return {
       loading: false,
       list: [
         {
-          isHot: '1',
-          name: '北京',
-          pinyin: 'beijing'
+          isHot: "1",
+          name: "北京",
+          pinyin: "beijing"
         }
       ]
     };
@@ -41,36 +41,42 @@ export default {
   methods: {
     async getCityList() {
       this.loading = true;
-      const url = '/city/getList';
-      $http.post(url).then(res => {
-        this.list = res.data.cities;
-        this.loading = false;
-      }).catch(error => {
-        console.log(error);
-        this.loading = false;
-      });
+      const url = "/city/getList";
+      $http
+        .post(url)
+        .then(res => {
+          this.list = res.cities;
+          this.loading = false;
+        })
+        .catch(error => {
+          console.log(error);
+          this.loading = false;
+        });
     },
 
     formatter(row, column, cellValue, index) {
-      return row.isHot === 'true' ? '是' : '否';
+      return row.isHot === "true" ? "是" : "否";
     },
 
     async del(item) {
-      const url = '/city/delById';
+      const url = "/city/delById";
       this.loading = true;
       const data = {
         cityId: item.cityId
       };
-      $http.post(url, data).then(res => {
-        this.loading = false;
-        const index = this.list.findIndex(value => {
-          return value.cityId === item.cityId;
+      $http
+        .post(url, data)
+        .then(res => {
+          this.loading = false;
+          const index = this.list.findIndex(value => {
+            return value.cityId === item.cityId;
+          });
+          this.list.splice(index, 1);
+        })
+        .catch(error => {
+          console.log(error);
+          this.loading = false;
         });
-        this.list.splice(index, 1);
-      }).catch(error => {
-        console.log(error);
-        this.loading = false;
-      });
     }
   }
 };

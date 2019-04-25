@@ -22,32 +22,36 @@
 </template>
 
 <script type="text/javascript">
-import $http from '@/utils/http';
+import $http from "@/utils/http";
 export default {
   data() {
     return {
-      name: '深圳',
-      pinyin: 'shenzhen',
+      name: "深圳",
+      pinyin: "shenzhen",
       isHot: false,
       loading: false
     };
   },
-  created() {
-
-  },
+  created() {},
   methods: {
     submit() {
       this.loading = true;
-      const url = '/city/add';
+      const url = "/city/add";
       const data = {
         name: this.name,
         pinyin: this.pinyin,
         isHot: this.isHot
       };
-      $http.post(url, data).then(res => {
-        this.$router.push('/city/list');
-        this.loading = false;
-      });
+      $http
+        .post(url, data)
+        .then(res => {
+          debugger;
+          this.$router.push("/city/list");
+          this.loading = false;
+        })
+        .catch(err => {
+          this.loading = false;
+        });
     }
   }
 };
