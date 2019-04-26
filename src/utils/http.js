@@ -1,16 +1,16 @@
-import axios from 'axios';
-import { Message } from 'element-ui';
+import axios from "axios";
+import { Message } from "element-ui";
 
-const env = 'test';
+const env = "dev";
 // 设置基本路径
 switch (env) {
-  case 'dev':
-    axios.defaults.baseURL = 'http://127.0.0.1:3000/admin';
+  case "dev":
+    axios.defaults.baseURL = "http://127.0.0.1:3000/admin";
     break;
-  case 'test':
-    axios.defaults.baseURL = 'http://132.232.87.95:3000/admin';
+  case "test":
+    axios.defaults.baseURL = "http://132.232.87.95:3000/admin";
     break;
-  case 'prod':
+  case "prod":
   // todo
 }
 
@@ -22,20 +22,20 @@ const get = (url, params) => {
         params
       })
       .then(res => {
-        if (res.data.code === '666') {
+        if (res.data.code === "666") {
           resolve(res.data);
         } else {
           Message({
             message: res.data.msg,
-            type: 'error',
+            type: "error",
             duration: 5 * 1000
           });
         }
       })
       .catch(error => {
         Message({
-          message: '网络异常',
-          type: 'error',
+          message: "网络异常",
+          type: "error",
           duration: 5 * 1000
         });
       });
@@ -47,20 +47,20 @@ const post = (url, params) => {
     axios
       .post(url, params)
       .then(res => {
-        if (res.data.code === '666') {
+        if (res.data.code === "666") {
           resolve(res.data);
         } else {
           Message({
             message: res.data.msg,
-            type: 'error',
+            type: "error",
             duration: 5 * 1000
           });
         }
       })
       .catch(error => {
         Message({
-          message: '网络异常',
-          type: 'error',
+          message: "网络异常",
+          type: "error",
           duration: 5 * 1000
         });
       });
