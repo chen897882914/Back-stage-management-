@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-2631"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-0d23"],{
 
 /***/ "14Xm":
 /***/ (function(module, exports, __webpack_require__) {
@@ -53,18 +53,143 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ "jX4/":
+/***/ "TJZt":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
+
+
+// 属性说明
+var attrDesc = {
+  name: '影院名称',
+  address: '地址',
+  // longitude: '经度',
+  // latitude: '纬度',
+  // gpsAddress: '经纬度',
+  // districtId: '区域id',
+  // districtName: '区域名称',
+  // 'district': {
+  //   'districtId': 440304,
+  //   'name': '福田区'
+  // },
+  phone: '电话',
+  // telephones: '电话列表',
+  // 'logoUrl': 'logo地址',
+  // businessTime: 'businessTime',
+  // notice: 'notice',
+  // isVisited: '已观看',
+  // 'services': [{
+  //   'name': '儿童票',
+  //   'description': '1.3米以下儿童可免费无座观影（MX4D厅除外），一名成人限带一名儿童（仅限1.3米以下）'
+  // }, {
+  //   'name': '停车',
+  //   'description': '东海缤纷天地地下停车场，凭当日票根50元免停1小时，100元免停2小时'
+  // }, {
+  //   'name': '3D眼镜',
+  //   'description': '为确保顾客观影卫生，请自带3D眼镜或前往前台购买，每副5元起'
+  // }],
+  // 'services': '服务',
+  lowPrice: '低价'
+  // Distance: '距离'
+};
+
+var form = {
+  name: '老胡电影院-深圳分院1',
+  address: '龙岗',
+  longitude: 114.027958,
+  latitude: 22.542708,
+  // gpsAddress: '114.027958:22.542708',
+  // cityId: 440300,
+  cityName: '深圳市',
+  districtId: '',
+  // districtName: '福田区',
+  // district: {
+  //   districtId: 440304,
+  //   name: '福田区'
+  // },
+  phone: '0755-32935088',
+  // telephones: ['0755-32935088'],
+  logoUrl: 'https://pic.maizuo.comusr/8119/4c825a0a7d23df9fed5b85caad9a4bc7.jpg',
+  // businessTime: '',
+  // notice: '',
+  // isVisited: 0,
+  // services: [
+  //   {
+  //     name: '儿童票',
+  //     description:
+  //       '1.3米以下儿童可免费无座观影（MX4D厅除外），一名成人限带一名儿童（仅限1.3米以下）'
+  //   },
+  //   {
+  //     name: '停车',
+  //     description:
+  //       '东海缤纷天地地下停车场，凭当日票根50元免停1小时，100元免停2小时'
+  //   },
+  //   {
+  //     name: '3D眼镜',
+  //     description: '为确保顾客观影卫生，请自带3D眼镜或前往前台购买，每副5元起'
+  //   }
+  // ],
+  lowPrice: 25,
+  distance: 0
+};
+
+var getList = function getList() {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/cinema/getList',
+    method: 'get'
+  });
+};
+
+var add = function add(cinema) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/cinema/add',
+    method: 'get',
+    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, cinema)
+  });
+};
+
+var del = function del(id) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/cinema/delById',
+    method: 'get',
+    params: { id: id }
+  });
+};
+
+var getDetail = function getDetail(cinemaId) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/cinema/findById',
+    method: 'get',
+    params: { cinemaId: cinemaId }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  form: form,
+  attrDesc: attrDesc,
+  add: add,
+  getDetail: getDetail,
+  del: del,
+  getList: getList
+});
+
+/***/ }),
+
+/***/ "dtve":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=template&id=610edd91&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(": \n\t\t\t"),_c('span',[_vm._v(_vm._s(_vm.film[key]))])])}))])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/detail.vue?vue&type=template&id=7eb7e2f1&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(": \n\t\t\t"),_c('span',[_vm._v(_vm._s(_vm.cinema[key]))])])}))])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=template&id=610edd91&
+// CONCATENATED MODULE: ./src/views/cinema/detail.vue?vue&type=template&id=7eb7e2f1&
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
 var regenerator = __webpack_require__("14Xm");
@@ -74,10 +199,10 @@ var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 var asyncToGenerator = __webpack_require__("D3Ub");
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
-// EXTERNAL MODULE: ./src/views/film/model.js
-var model = __webpack_require__("ri/G");
+// EXTERNAL MODULE: ./src/views/cinema/model.js
+var model = __webpack_require__("TJZt");
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/detail.vue?vue&type=script&lang=js&
 
 
 //
@@ -100,12 +225,12 @@ var model = __webpack_require__("ri/G");
 	data: function data() {
 		return {
 			attrDesc: model["a" /* default */].attrDesc,
-			film: model["a" /* default */].form,
+			cinema: model["a" /* default */].form,
 			loading: false
 		};
 	},
 	created: function created() {
-		this.getDetail(this.$route.query.filmId);
+		this.getDetail(this.$route.query.cinemaId);
 	},
 
 
@@ -126,7 +251,7 @@ var model = __webpack_require__("ri/G");
 							case 3:
 								res = _context.sent;
 
-								_this.form = res.data.film;
+								_this.cinema = res.data.cinema;
 
 								_context.next = 10;
 								break;
@@ -147,12 +272,12 @@ var model = __webpack_require__("ri/G");
 		}
 	}
 });
-// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=script&lang=js&
- /* harmony default export */ var film_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/views/cinema/detail.vue?vue&type=script&lang=js&
+ /* harmony default export */ var cinema_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("KHd+");
 
-// CONCATENATED MODULE: ./src/views/film/detail.vue
+// CONCATENATED MODULE: ./src/views/cinema/detail.vue
 
 
 
@@ -161,7 +286,7 @@ var componentNormalizer = __webpack_require__("KHd+");
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  film_detailvue_type_script_lang_js_,
+  cinema_detailvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
@@ -907,139 +1032,6 @@ component.options.__file = "detail.vue"
   (function() { return this })() || Function("return this")()
 );
 
-
-/***/ }),
-
-/***/ "ri/G":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
-
-
-// 属性说明
-var attrDesc = {
-  name: '电影名称',
-  filmId: '电影编号',
-  poster: '海报',
-  cityId: '城市编号',
-  city: '城市',
-  districtId: '区域编号',
-  district: '区域',
-  //	actors: "演员表",
-  director: '导演',
-  // category: '分类',
-  // synopsis: '简介',
-  //	filmType: "类别",
-  nation: '产地',
-  language: '语言',
-  // videoId: 'videoId',
-  // premiereAt: '首映式',
-  // timeType: 'timeType',
-  runtime: '影片时长',
-  //	photos: "照片集",
-  grade: '评分'
-  // type: '类型'
-  //	item: "item",
-  // isPresale: '预售',
-  // isSale: '售卖中'
-};
-
-var form = {
-  name: '驯龙高手3',
-  filmId: '',
-  poster: 'https://static.maizuo.com/pc/v5/usr/movie/394c418ad9a14e301438176f3dd65028.jpg',
-  actors: [],
-  director: '迪恩·德布洛斯',
-  category: ['动画', '奇幻', '冒险'],
-  synopsis: '统领伯克岛的酋长嗝嗝，与阿丝翠德共同打造了一个奇妙而热闹的飞龙乌托邦。而一只雌性光煞飞龙的意外出现，加上一个前所未有的威胁的到来，令嗝嗝和没牙仔不得不离开自己唯一的家园，前往他们本以为只存在于神话之中的隐秘之境。在发现自己真正的命运之后，飞龙与骑士将携手殊死奋战，保护他们所珍爱的一切。',
-  // filmType: {
-  //   name: '2D',
-  //   value: 1
-  // },
-  nation: '美国',
-  language: '英语',
-  // videoId: 'XMzk0OTI4NDYwOA==',
-  premiereAt: '1551398400',
-  // timeType: 3,
-  runtime: '100',
-  photos: [],
-  grade: '7.8',
-  // item: {
-  //   name: '2D',
-  //   type: 1
-  // },
-  type: '',
-  isPresale: false
-  // isSale: false
-
-
-  // 需要的属性
-};var needAttr = function needAttr(form, data) {
-  for (var p in form) {
-    form[p] = data[p];
-  }
-  return form;
-};
-
-var getList = function getList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/getList',
-    method: 'get'
-  });
-};
-
-var getDistrictList = function getDistrictList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/district/getList',
-    method: 'get'
-  });
-};
-
-var add = function add(film) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/add',
-    method: 'post',
-    data: film
-  });
-};
-var update = function update(film) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/update',
-    method: 'get',
-    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, film)
-  });
-};
-
-var del = function del(id) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/delById',
-    method: 'get',
-    params: { id: id }
-  });
-};
-
-var getDetail = function getDetail(filmId) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/findById',
-    method: 'get',
-    params: { filmId: filmId }
-  });
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  form: form,
-  attrDesc: attrDesc,
-  add: add,
-  getDetail: getDetail,
-  del: del,
-  update: update,
-  needAttr: needAttr,
-  getList: getList,
-  getDistrictList: getDistrictList
-});
 
 /***/ }),
 

@@ -6,12 +6,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/add.vue?vue&type=template&id=1fc2abaa&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/add.vue?vue&type=template&id=21b4bd44&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("添加区域")])]),_vm._v(" "),_c('el-form',{ref:"form",staticStyle:{"width":"80%"},attrs:{"action":"","method":"post"}},[_c('el-form-item',{attrs:{"label":"城市编号","label-width":"120px"}},[_c('el-input',{attrs:{"disabled":""},model:{value:(_vm.form.cityId),callback:function ($$v) {_vm.$set(_vm.form, "cityId", $$v)},expression:"form.cityId"}})],1),_vm._v(" "),_c('el-form-item',{attrs:{"label":"城市名称","label-width":"120px"}},[_c('el-input',{attrs:{"disabled":""},model:{value:(_vm.form.cityName),callback:function ($$v) {_vm.$set(_vm.form, "cityName", $$v)},expression:"form.cityName"}})],1),_vm._v(" "),_c('el-form-item',{attrs:{"label":"区域名称","label-width":"120px"}},[_c('el-input',{attrs:{"placeholder":"区域名称"},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1),_vm._v(" "),_c('el-form-item',{staticStyle:{"text-align":"center"}},[_c('el-button',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],attrs:{"type":"primary"},on:{"click":_vm.submit}},[_vm._v("添加")])],1)],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/district/add.vue?vue&type=template&id=1fc2abaa&
+// CONCATENATED MODULE: ./src/views/district/add.vue?vue&type=template&id=21b4bd44&
 
 // EXTERNAL MODULE: ./src/views/district/model.js
 var model = __webpack_require__("ZteL");

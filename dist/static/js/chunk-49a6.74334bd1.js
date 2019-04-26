@@ -87,12 +87,12 @@ var getDetail = function getDetail(id) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/schedule/add.vue?vue&type=template&id=00ce84d4&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/schedule/add.vue?vue&type=template&id=f406f6da&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("添加城市")])]),_vm._v(" "),_c('el-form',{ref:"form",staticStyle:{"width":"80%"},attrs:{"action":"","method":"post"}},[_vm._l((_vm.attrDesc),function(value,key){return _c('el-form-item',{key:key,attrs:{"label":value,"label-width":"120px"}},[_c('el-input',{attrs:{"placeholder":("请输入" + value)},model:{value:(_vm.form[key]),callback:function ($$v) {_vm.$set(_vm.form, key, $$v)},expression:"form[key]"}})],1)}),_vm._v(" "),_c('el-form-item',{staticStyle:{"text-align":"center"}},[_c('el-button',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],attrs:{"type":"primary"},on:{"click":_vm.submit}},[_vm._v("添加")])],1)],2)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/schedule/add.vue?vue&type=template&id=00ce84d4&
+// CONCATENATED MODULE: ./src/views/schedule/add.vue?vue&type=template&id=f406f6da&
 
 // EXTERNAL MODULE: ./src/views/schedule/model.js
 var model = __webpack_require__("WGRL");
