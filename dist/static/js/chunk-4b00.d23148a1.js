@@ -14,16 +14,16 @@
 
 
 
-var env = "dev";
+var env = 'test';
 // 设置基本路径
 switch (env) {
-  case "dev":
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = "http://127.0.0.1:3000/admin";
+  case 'dev':
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://127.0.0.1:3000/admin';
     break;
-  case "test":
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = "http://132.232.87.95:3000/admin";
+  case 'test':
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://132.232.87.95:3000/admin';
     break;
-  case "prod":
+  case 'prod':
   // todo
 }
 
@@ -33,19 +33,19 @@ var get = function get(url, params) {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url, {
       params: params
     }).then(function (res) {
-      if (res.data.code === "666") {
+      if (res.data.code === '666') {
         resolve(res.data);
       } else {
         Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
           message: res.data.msg,
-          type: "error",
+          type: 'error',
           duration: 5 * 1000
         });
       }
     }).catch(function (error) {
       Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
-        message: "网络异常",
-        type: "error",
+        message: '网络异常',
+        type: 'error',
         duration: 5 * 1000
       });
     });
@@ -55,19 +55,19 @@ var post = function post(url, params) {
   params = params || {};
   return new babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(url, params).then(function (res) {
-      if (res.data.code === "666") {
+      if (res.data.code === '666') {
         resolve(res.data);
       } else {
         Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
           message: res.data.msg,
-          type: "error",
+          type: 'error',
           duration: 5 * 1000
         });
       }
     }).catch(function (error) {
       Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
-        message: "网络异常",
-        type: "error",
+        message: '网络异常',
+        type: 'error',
         duration: 5 * 1000
       });
     });
