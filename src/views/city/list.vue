@@ -55,7 +55,7 @@ export default {
     },
 
     formatter(row, column, cellValue, index) {
-      return row.isHot === "true" ? "是" : "否";
+      return row.isHot ? "是" : "否";
     },
 
     async del(item) {

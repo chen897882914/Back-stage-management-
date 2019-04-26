@@ -49,7 +49,7 @@ export default {
       $http.post(url, data).then(res => {
         this.name = res.city.name;
         this.pinyin = res.city.pinyin;
-        this.isHot = !!res.city.isHot;
+        this.isHot = res.city.isHot;
         this.loading = false;
       });
     },
