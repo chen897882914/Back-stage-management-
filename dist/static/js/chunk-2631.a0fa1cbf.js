@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-ccd1"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-2631"],{
 
 /***/ "14Xm":
 /***/ (function(module, exports, __webpack_require__) {
@@ -53,84 +53,126 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ "WGRL":
+/***/ "jX4/":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=template&id=610edd91&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(": \n\t\t\t"),_c('span',[_vm._v(_vm._s(_vm.film[key]))])])}))])}
+var staticRenderFns = []
 
 
-// 属性说明
-var attrDesc = {
-  filmId: '电影id',
-  advanceStopMins: 'advanceStopMins',
-  payDay: '上映日期',
-  showAt: '开始时间',
-  endAt: '结束时间',
-  filmLanguage: '电影语言',
-  hallName: '影厅序号',
-  imagery: '成影类型',
-  isOnsell: '在售',
-  marketPrice: '市场价格',
-  salePrice: '售价'
-};
+// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=template&id=610edd91&
 
-var form = {
-  filmId: '',
-  payDay: '2019-01-19',
-  advanceStopMins: 15,
-  endAt: 1548390000,
-  filmLanguage: '原声',
-  hallName: '9号4K巨幕厅',
-  imagery: '2D',
-  isOnsell: true,
-  marketPrice: 10000,
-  salePrice: 3000,
-  scheduleId: 951097166,
-  showAt: 1548382800
-};
+// EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
+var regenerator = __webpack_require__("14Xm");
+var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
-var getList = function getList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/schedule/getList',
-    method: 'get'
-  });
-};
+// EXTERNAL MODULE: ./node_modules/babel-runtime/helpers/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__("D3Ub");
+var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
-var add = function add(schedule) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/schedule/add',
-    method: 'get',
-    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, schedule)
-  });
-};
+// EXTERNAL MODULE: ./src/views/film/model.js
+var model = __webpack_require__("ri/G");
 
-var del = function del(id) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/schedule/delById',
-    method: 'get',
-    params: { id: id }
-  });
-};
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=script&lang=js&
 
-var getDetail = function getDetail(id) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/schedule/findById',
-    method: 'get',
-    params: { id: id }
-  });
-};
 
-/* harmony default export */ __webpack_exports__["a"] = ({
-  form: form,
-  attrDesc: attrDesc,
-  add: add,
-  getDetail: getDetail,
-  del: del,
-  getList: getList
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var detailvue_type_script_lang_js_ = ({
+	data: function data() {
+		return {
+			attrDesc: model["a" /* default */].attrDesc,
+			film: model["a" /* default */].form,
+			loading: false
+		};
+	},
+	created: function created() {
+		this.getDetail(this.$route.query.filmId);
+	},
+
+
+	methods: {
+		getDetail: function getDetail(id) {
+			var _this = this;
+
+			return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+				var res;
+				return regenerator_default.a.wrap(function _callee$(_context) {
+					while (1) {
+						switch (_context.prev = _context.next) {
+							case 0:
+								_context.prev = 0;
+								_context.next = 3;
+								return model["a" /* default */].getDetail(id);
+
+							case 3:
+								res = _context.sent;
+
+								_this.form = res.data.film;
+
+								_context.next = 10;
+								break;
+
+							case 7:
+								_context.prev = 7;
+								_context.t0 = _context['catch'](0);
+
+								console.log(_context.t0);
+
+							case 10:
+							case 'end':
+								return _context.stop();
+						}
+					}
+				}, _callee, _this, [[0, 7]]);
+			}))();
+		}
+	}
 });
+// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=script&lang=js&
+ /* harmony default export */ var film_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("KHd+");
+
+// CONCATENATED MODULE: ./src/views/film/detail.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  film_detailvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "detail.vue"
+/* harmony default export */ var detail = __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
@@ -868,6 +910,139 @@ var getDetail = function getDetail(id) {
 
 /***/ }),
 
+/***/ "ri/G":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
+
+
+// 属性说明
+var attrDesc = {
+  name: '电影名称',
+  filmId: '电影编号',
+  poster: '海报',
+  cityId: '城市编号',
+  city: '城市',
+  districtId: '区域编号',
+  district: '区域',
+  //	actors: "演员表",
+  director: '导演',
+  // category: '分类',
+  // synopsis: '简介',
+  //	filmType: "类别",
+  nation: '产地',
+  language: '语言',
+  // videoId: 'videoId',
+  // premiereAt: '首映式',
+  // timeType: 'timeType',
+  runtime: '影片时长',
+  //	photos: "照片集",
+  grade: '评分'
+  // type: '类型'
+  //	item: "item",
+  // isPresale: '预售',
+  // isSale: '售卖中'
+};
+
+var form = {
+  name: '驯龙高手3',
+  filmId: '',
+  poster: 'https://static.maizuo.com/pc/v5/usr/movie/394c418ad9a14e301438176f3dd65028.jpg',
+  actors: [],
+  director: '迪恩·德布洛斯',
+  category: ['动画', '奇幻', '冒险'],
+  synopsis: '统领伯克岛的酋长嗝嗝，与阿丝翠德共同打造了一个奇妙而热闹的飞龙乌托邦。而一只雌性光煞飞龙的意外出现，加上一个前所未有的威胁的到来，令嗝嗝和没牙仔不得不离开自己唯一的家园，前往他们本以为只存在于神话之中的隐秘之境。在发现自己真正的命运之后，飞龙与骑士将携手殊死奋战，保护他们所珍爱的一切。',
+  // filmType: {
+  //   name: '2D',
+  //   value: 1
+  // },
+  nation: '美国',
+  language: '英语',
+  // videoId: 'XMzk0OTI4NDYwOA==',
+  premiereAt: '1551398400',
+  // timeType: 3,
+  runtime: '100',
+  photos: [],
+  grade: '7.8',
+  // item: {
+  //   name: '2D',
+  //   type: 1
+  // },
+  type: '',
+  isPresale: false
+  // isSale: false
+
+
+  // 需要的属性
+};var needAttr = function needAttr(form, data) {
+  for (var p in form) {
+    form[p] = data[p];
+  }
+  return form;
+};
+
+var getList = function getList() {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/film/getList',
+    method: 'get'
+  });
+};
+
+var getDistrictList = function getDistrictList() {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/district/getList',
+    method: 'get'
+  });
+};
+
+var add = function add(film) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/film/add',
+    method: 'post',
+    data: film
+  });
+};
+var update = function update(film) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/film/update',
+    method: 'get',
+    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, film)
+  });
+};
+
+var del = function del(id) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/film/delById',
+    method: 'get',
+    params: { id: id }
+  });
+};
+
+var getDetail = function getDetail(filmId) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/film/findById',
+    method: 'get',
+    params: { filmId: filmId }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  form: form,
+  attrDesc: attrDesc,
+  add: add,
+  getDetail: getDetail,
+  del: del,
+  update: update,
+  needAttr: needAttr,
+  getList: getList,
+  getDistrictList: getDistrictList
+});
+
+/***/ }),
+
 /***/ "u938":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -907,128 +1082,6 @@ if (hadRuntime) {
   }
 }
 
-
-/***/ }),
-
-/***/ "xRuT":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/schedule/detail.vue?vue&type=template&id=5131845f&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(":\n      "),_c('span',[_vm._v(_vm._s(_vm.cinema[key]))])])}))])}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/views/schedule/detail.vue?vue&type=template&id=5131845f&
-
-// EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
-var regenerator = __webpack_require__("14Xm");
-var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
-
-// EXTERNAL MODULE: ./node_modules/babel-runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__("D3Ub");
-var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
-
-// EXTERNAL MODULE: ./src/views/schedule/model.js
-var model = __webpack_require__("WGRL");
-
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/schedule/detail.vue?vue&type=script&lang=js&
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ var detailvue_type_script_lang_js_ = ({
-  data: function data() {
-    return {
-      attrDesc: model["a" /* default */].attrDesc,
-      cinema: model["a" /* default */].form,
-      loading: false
-    };
-  },
-  created: function created() {
-    this.getDetail(this.$route.query.scheduleId);
-  },
-
-
-  methods: {
-    getDetail: function getDetail(id) {
-      var _this = this;
-
-      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
-        var res;
-        return regenerator_default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return model["a" /* default */].getDetail(id);
-
-              case 3:
-                res = _context.sent;
-
-                _this.cinema = res.data.cinema;
-                _context.next = 10;
-                break;
-
-              case 7:
-                _context.prev = 7;
-                _context.t0 = _context["catch"](0);
-
-                console.log(_context.t0);
-
-              case 10:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, _this, [[0, 7]]);
-      }))();
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/views/schedule/detail.vue?vue&type=script&lang=js&
- /* harmony default export */ var schedule_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__("KHd+");
-
-// CONCATENATED MODULE: ./src/views/schedule/detail.vue
-
-
-
-
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  schedule_detailvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "detail.vue"
-/* harmony default export */ var detail = __webpack_exports__["default"] = (component.exports);
 
 /***/ })
 

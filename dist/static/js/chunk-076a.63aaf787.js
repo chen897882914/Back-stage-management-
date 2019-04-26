@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-2631"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-076a"],{
 
 /***/ "14Xm":
 /***/ (function(module, exports, __webpack_require__) {
@@ -53,18 +53,18 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ "jX4/":
+/***/ "Upsk":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=template&id=32cc25e9&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(": \n\t\t\t"),_c('span',[_vm._v(_vm._s(_vm.film[key]))])])}))])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/list.vue?vue&type=template&id=19eac6fc&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片列表")])]),_vm._v(" "),_c('el-table',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],staticStyle:{"width":"100%"},attrs:{"data":_vm.list,"stripe":""}},[_c('el-table-column',{attrs:{"prop":"name","label":"区域名称"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"city.name","label":"城市名称"}}),_vm._v(" "),_c('el-table-column',{attrs:{"fixed":"right","label":"操作","width":"200"},scopedSlots:_vm._u([{key:"default",fn:function(scope){return [_c('el-button',{attrs:{"type":"text","size":"small"},on:{"click":function($event){_vm.del(scope.row)}}},[_vm._v("删除")]),_vm._v(" "),_c('el-button',{attrs:{"type":"text","size":"small"}},[_c('router-link',{attrs:{"to":("/cinema/add/" + (scope.row.districtId))}},[_vm._v("添加影院")])],1)]}}])})],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=template&id=32cc25e9&
+// CONCATENATED MODULE: ./src/views/district/list.vue?vue&type=template&id=19eac6fc&
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
 var regenerator = __webpack_require__("14Xm");
@@ -74,10 +74,10 @@ var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 var asyncToGenerator = __webpack_require__("D3Ub");
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
-// EXTERNAL MODULE: ./src/views/film/model.js
-var model = __webpack_require__("ri/G");
+// EXTERNAL MODULE: ./src/views/district/model.js
+var model = __webpack_require__("ZteL");
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/film/detail.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/list.vue?vue&type=script&lang=js&
 
 
 //
@@ -94,65 +94,139 @@ var model = __webpack_require__("ri/G");
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
-/* harmony default export */ var detailvue_type_script_lang_js_ = ({
-	data: function data() {
-		return {
-			attrDesc: model["a" /* default */].attrDesc,
-			film: model["a" /* default */].form,
-			loading: false
-		};
-	},
-	created: function created() {
-		this.getDetail(this.$route.query.filmId);
-	},
+/* harmony default export */ var listvue_type_script_lang_js_ = ({
+  data: function data() {
+    return {
+      loading: false,
+      attrDesc: model["a" /* default */].attrDesc,
+      list: [{
+        isHot: "1",
+        name: "北区",
+        city: {
+          name: ""
+        },
+        pinyin: "beijing"
+      }]
+    };
+  },
+  created: function created() {
+    this.getList();
+  },
 
 
-	methods: {
-		getDetail: function getDetail(id) {
-			var _this = this;
+  methods: {
+    getList: function getList() {
+      var _this = this;
 
-			return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
-				var res;
-				return regenerator_default.a.wrap(function _callee$(_context) {
-					while (1) {
-						switch (_context.prev = _context.next) {
-							case 0:
-								_context.prev = 0;
-								_context.next = 3;
-								return model["a" /* default */].getDetail(id);
+      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+        var res;
+        return regenerator_default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.loading = true;
+                _context.prev = 1;
+                _context.next = 4;
+                return model["a" /* default */].getList();
 
-							case 3:
-								res = _context.sent;
+              case 4:
+                res = _context.sent;
 
-								_this.form = res.data.film;
+                _this.list = res.districts;
+                _this.loading = false;
+                _context.next = 13;
+                break;
 
-								_context.next = 10;
-								break;
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](1);
 
-							case 7:
-								_context.prev = 7;
-								_context.t0 = _context['catch'](0);
+                console.log(_context.t0);
+                _this.loading = false;
 
-								console.log(_context.t0);
+              case 13:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, _this, [[1, 9]]);
+      }))();
+    },
+    formatter: function formatter(row, column, cellValue, index) {
+      return row.isHot == 1 ? "是" : "否";
+    },
+    del: function del(item) {
+      var _this2 = this;
 
-							case 10:
-							case 'end':
-								return _context.stop();
-						}
-					}
-				}, _callee, _this, [[0, 7]]);
-			}))();
-		}
-	}
+      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {
+        var res, index;
+        return regenerator_default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return model["a" /* default */].del(item.districtId);
+
+              case 3:
+                res = _context2.sent;
+
+                // 查找下标
+                index = _this2.list.findIndex(function (value) {
+                  return value.districtId === item.districtId;
+                });
+
+                _this2.list.splice(index, 1);
+                _context2.next = 11;
+                break;
+
+              case 8:
+                _context2.prev = 8;
+                _context2.t0 = _context2["catch"](0);
+
+                console.log(_context2.t0);
+
+              case 11:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, _this2, [[0, 8]]);
+      }))();
+    },
+    addCinema: function addCinema(item) {
+      // todo
+
+      var _this3 = this;
+
+      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3() {
+        return regenerator_default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, _this3);
+      }))();
+    }
+  }
 });
-// CONCATENATED MODULE: ./src/views/film/detail.vue?vue&type=script&lang=js&
- /* harmony default export */ var film_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/views/district/list.vue?vue&type=script&lang=js&
+ /* harmony default export */ var district_listvue_type_script_lang_js_ = (listvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("KHd+");
 
-// CONCATENATED MODULE: ./src/views/film/detail.vue
+// CONCATENATED MODULE: ./src/views/district/list.vue
 
 
 
@@ -161,7 +235,7 @@ var componentNormalizer = __webpack_require__("KHd+");
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  film_detailvue_type_script_lang_js_,
+  district_listvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
@@ -171,8 +245,72 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-component.options.__file = "detail.vue"
-/* harmony default export */ var detail = __webpack_exports__["default"] = (component.exports);
+component.options.__file = "list.vue"
+/* harmony default export */ var list = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "ZteL":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
+/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
+
+
+// 属性说明
+var attrDesc = {
+  cityId: '城市id',
+  cityName: '城市名称',
+  name: '区域名称'
+};
+
+var form = {
+  cityId: '',
+  cityName: '',
+  name: ''
+};
+
+var getList = function getList() {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/district/getList',
+    method: 'get'
+  });
+};
+
+var add = function add(district) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/district/add',
+    method: 'get',
+    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, district)
+  });
+};
+
+var del = function del(id) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/district/delById',
+    method: 'get',
+    params: { id: id }
+  });
+};
+
+var getDetail = function getDetail(districtId) {
+  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+    url: '/district/findById',
+    method: 'get',
+    params: { districtId: districtId }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  form: form,
+  attrDesc: attrDesc,
+  add: add,
+  getDetail: getDetail,
+  del: del,
+  getList: getList
+});
 
 /***/ }),
 
@@ -907,139 +1045,6 @@ component.options.__file = "detail.vue"
   (function() { return this })() || Function("return this")()
 );
 
-
-/***/ }),
-
-/***/ "ri/G":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
-
-
-// 属性说明
-var attrDesc = {
-  name: '电影名称',
-  filmId: '电影编号',
-  poster: '海报',
-  cityId: '城市编号',
-  city: '城市',
-  districtId: '区域编号',
-  district: '区域',
-  //	actors: "演员表",
-  director: '导演',
-  // category: '分类',
-  // synopsis: '简介',
-  //	filmType: "类别",
-  nation: '产地',
-  language: '语言',
-  // videoId: 'videoId',
-  // premiereAt: '首映式',
-  // timeType: 'timeType',
-  runtime: '影片时长',
-  //	photos: "照片集",
-  grade: '评分'
-  // type: '类型'
-  //	item: "item",
-  // isPresale: '预售',
-  // isSale: '售卖中'
-};
-
-var form = {
-  name: '驯龙高手3',
-  filmId: '',
-  poster: 'https://static.maizuo.com/pc/v5/usr/movie/394c418ad9a14e301438176f3dd65028.jpg',
-  actors: [],
-  director: '迪恩·德布洛斯',
-  category: ['动画', '奇幻', '冒险'],
-  synopsis: '统领伯克岛的酋长嗝嗝，与阿丝翠德共同打造了一个奇妙而热闹的飞龙乌托邦。而一只雌性光煞飞龙的意外出现，加上一个前所未有的威胁的到来，令嗝嗝和没牙仔不得不离开自己唯一的家园，前往他们本以为只存在于神话之中的隐秘之境。在发现自己真正的命运之后，飞龙与骑士将携手殊死奋战，保护他们所珍爱的一切。',
-  // filmType: {
-  //   name: '2D',
-  //   value: 1
-  // },
-  nation: '美国',
-  language: '英语',
-  // videoId: 'XMzk0OTI4NDYwOA==',
-  premiereAt: '1551398400',
-  // timeType: 3,
-  runtime: '100',
-  photos: [],
-  grade: '7.8',
-  // item: {
-  //   name: '2D',
-  //   type: 1
-  // },
-  type: '',
-  isPresale: false
-  // isSale: false
-
-
-  // 需要的属性
-};var needAttr = function needAttr(form, data) {
-  for (var p in form) {
-    form[p] = data[p];
-  }
-  return form;
-};
-
-var getList = function getList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/getList',
-    method: 'get'
-  });
-};
-
-var getDistrictList = function getDistrictList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/district/getList',
-    method: 'get'
-  });
-};
-
-var add = function add(film) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/add',
-    method: 'post',
-    data: film
-  });
-};
-var update = function update(film) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/update',
-    method: 'get',
-    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, film)
-  });
-};
-
-var del = function del(id) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/delById',
-    method: 'get',
-    params: { id: id }
-  });
-};
-
-var getDetail = function getDetail(filmId) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/film/findById',
-    method: 'get',
-    params: { filmId: filmId }
-  });
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  form: form,
-  attrDesc: attrDesc,
-  add: add,
-  getDetail: getDetail,
-  del: del,
-  update: update,
-  needAttr: needAttr,
-  getList: getList,
-  getDistrictList: getDistrictList
-});
 
 /***/ }),
 

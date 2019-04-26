@@ -13,12 +13,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/index.vue?vue&type=template&id=d499ed62&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/index.vue?vue&type=template&id=0af2cac1&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('router-view')}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/district/index.vue?vue&type=template&id=d499ed62&
+// CONCATENATED MODULE: ./src/views/district/index.vue?vue&type=template&id=0af2cac1&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/district/index.vue?vue&type=script&lang=js&
 //

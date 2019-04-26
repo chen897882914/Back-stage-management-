@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-0d23"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-7313"],{
 
 /***/ "14Xm":
 /***/ (function(module, exports, __webpack_require__) {
@@ -53,143 +53,18 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ "TJZt":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QbLZ");
-/* harmony import */ var babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("t3Un");
-
-
-// 属性说明
-var attrDesc = {
-  name: '影院名称',
-  address: '地址',
-  // longitude: '经度',
-  // latitude: '纬度',
-  // gpsAddress: '经纬度',
-  // districtId: '区域id',
-  // districtName: '区域名称',
-  // 'district': {
-  //   'districtId': 440304,
-  //   'name': '福田区'
-  // },
-  phone: '电话',
-  // telephones: '电话列表',
-  // 'logoUrl': 'logo地址',
-  // businessTime: 'businessTime',
-  // notice: 'notice',
-  // isVisited: '已观看',
-  // 'services': [{
-  //   'name': '儿童票',
-  //   'description': '1.3米以下儿童可免费无座观影（MX4D厅除外），一名成人限带一名儿童（仅限1.3米以下）'
-  // }, {
-  //   'name': '停车',
-  //   'description': '东海缤纷天地地下停车场，凭当日票根50元免停1小时，100元免停2小时'
-  // }, {
-  //   'name': '3D眼镜',
-  //   'description': '为确保顾客观影卫生，请自带3D眼镜或前往前台购买，每副5元起'
-  // }],
-  // 'services': '服务',
-  lowPrice: '低价'
-  // Distance: '距离'
-};
-
-var form = {
-  name: '老胡电影院-深圳分院1',
-  address: '龙岗',
-  longitude: 114.027958,
-  latitude: 22.542708,
-  // gpsAddress: '114.027958:22.542708',
-  // cityId: 440300,
-  cityName: '深圳市',
-  districtId: '',
-  // districtName: '福田区',
-  // district: {
-  //   districtId: 440304,
-  //   name: '福田区'
-  // },
-  phone: '0755-32935088',
-  // telephones: ['0755-32935088'],
-  logoUrl: 'https://pic.maizuo.comusr/8119/4c825a0a7d23df9fed5b85caad9a4bc7.jpg',
-  // businessTime: '',
-  // notice: '',
-  // isVisited: 0,
-  // services: [
-  //   {
-  //     name: '儿童票',
-  //     description:
-  //       '1.3米以下儿童可免费无座观影（MX4D厅除外），一名成人限带一名儿童（仅限1.3米以下）'
-  //   },
-  //   {
-  //     name: '停车',
-  //     description:
-  //       '东海缤纷天地地下停车场，凭当日票根50元免停1小时，100元免停2小时'
-  //   },
-  //   {
-  //     name: '3D眼镜',
-  //     description: '为确保顾客观影卫生，请自带3D眼镜或前往前台购买，每副5元起'
-  //   }
-  // ],
-  lowPrice: 25,
-  distance: 0
-};
-
-var getList = function getList() {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/cinema/getList',
-    method: 'get'
-  });
-};
-
-var add = function add(cinema) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/cinema/add',
-    method: 'get',
-    params: babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, cinema)
-  });
-};
-
-var del = function del(id) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/cinema/delById',
-    method: 'get',
-    params: { id: id }
-  });
-};
-
-var getDetail = function getDetail(cinemaId) {
-  return Object(_utils_request__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    url: '/cinema/findById',
-    method: 'get',
-    params: { cinemaId: cinemaId }
-  });
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  form: form,
-  attrDesc: attrDesc,
-  add: add,
-  getDetail: getDetail,
-  del: del,
-  getList: getList
-});
-
-/***/ }),
-
-/***/ "dtve":
+/***/ "HY+Z":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/detail.vue?vue&type=template&id=7eb7e2f1&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片详情")])]),_vm._v(" "),_c('ul',_vm._l((_vm.attrDesc),function(value,key){return _c('li',{key:key,staticStyle:{"padding":"10px 0","line-height":"1.5"}},[_c('strong',[_vm._v(_vm._s(value))]),_vm._v(": \n\t\t\t"),_c('span',[_vm._v(_vm._s(_vm.cinema[key]))])])}))])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/city/list.vue?vue&type=template&id=6e20ca28&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片列表")])]),_vm._v(" "),_c('el-table',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],staticStyle:{"width":"80%"},attrs:{"data":_vm.list,"stripe":""}},[_c('el-table-column',{attrs:{"align":"center","prop":"name","label":"城市名称"}}),_vm._v(" "),_c('el-table-column',{attrs:{"align":"center","prop":"pinyin","label":"城市拼音"}}),_vm._v(" "),_c('el-table-column',{attrs:{"formatter":_vm.formatter,"align":"center","prop":"isHot","label":"热门城市"}}),_vm._v(" "),_c('el-table-column',{attrs:{"fixed":"right","align":"center","label":"操作","width":"200"},scopedSlots:_vm._u([{key:"default",fn:function(scope){return [_c('el-button',{attrs:{"type":"text","size":"small"},on:{"click":function($event){_vm.del(scope.row)}}},[_vm._v("删除")]),_vm._v(" "),_c('el-button',{attrs:{"type":"text","size":"small"}},[_c('router-link',{attrs:{"to":("/city/edit/" + (scope.row.cityId))}},[_vm._v("编辑")])],1)]}}])})],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/cinema/detail.vue?vue&type=template&id=7eb7e2f1&
+// CONCATENATED MODULE: ./src/views/city/list.vue?vue&type=template&id=6e20ca28&
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
 var regenerator = __webpack_require__("14Xm");
@@ -199,10 +74,10 @@ var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 var asyncToGenerator = __webpack_require__("D3Ub");
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
-// EXTERNAL MODULE: ./src/views/cinema/model.js
-var model = __webpack_require__("TJZt");
+// EXTERNAL MODULE: ./src/utils/http.js
+var http = __webpack_require__("dRp0");
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/detail.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/city/list.vue?vue&type=script&lang=js&
 
 
 //
@@ -219,65 +94,106 @@ var model = __webpack_require__("TJZt");
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
-/* harmony default export */ var detailvue_type_script_lang_js_ = ({
-	data: function data() {
-		return {
-			attrDesc: model["a" /* default */].attrDesc,
-			cinema: model["a" /* default */].form,
-			loading: false
-		};
-	},
-	created: function created() {
-		this.getDetail(this.$route.query.cinemaId);
-	},
+/* harmony default export */ var listvue_type_script_lang_js_ = ({
+  data: function data() {
+    return {
+      loading: false,
+      list: [{
+        isHot: "1",
+        name: "北京",
+        pinyin: "beijing"
+      }]
+    };
+  },
+  created: function created() {
+    this.getCityList();
+  },
 
 
-	methods: {
-		getDetail: function getDetail(id) {
-			var _this = this;
+  methods: {
+    getCityList: function getCityList() {
+      var _this = this;
 
-			return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
-				var res;
-				return regenerator_default.a.wrap(function _callee$(_context) {
-					while (1) {
-						switch (_context.prev = _context.next) {
-							case 0:
-								_context.prev = 0;
-								_context.next = 3;
-								return model["a" /* default */].getDetail(id);
+      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+        var url;
+        return regenerator_default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.loading = true;
+                url = "/city/getList";
 
-							case 3:
-								res = _context.sent;
+                http["a" /* default */].post(url).then(function (res) {
+                  _this.list = res.cities;
+                  _this.loading = false;
+                }).catch(function (error) {
+                  console.log(error);
+                  _this.loading = false;
+                });
 
-								_this.cinema = res.data.cinema;
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, _this);
+      }))();
+    },
+    formatter: function formatter(row, column, cellValue, index) {
+      return row.isHot === "true" ? "是" : "否";
+    },
+    del: function del(item) {
+      var _this2 = this;
 
-								_context.next = 10;
-								break;
+      return asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {
+        var url, data;
+        return regenerator_default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                url = "/city/delById";
 
-							case 7:
-								_context.prev = 7;
-								_context.t0 = _context['catch'](0);
+                _this2.loading = true;
+                data = {
+                  cityId: item.cityId
+                };
 
-								console.log(_context.t0);
+                http["a" /* default */].post(url, data).then(function (res) {
+                  _this2.loading = false;
+                  var index = _this2.list.findIndex(function (value) {
+                    return value.cityId === item.cityId;
+                  });
+                  _this2.list.splice(index, 1);
+                }).catch(function (error) {
+                  console.log(error);
+                  _this2.loading = false;
+                });
 
-							case 10:
-							case 'end':
-								return _context.stop();
-						}
-					}
-				}, _callee, _this, [[0, 7]]);
-			}))();
-		}
-	}
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, _this2);
+      }))();
+    }
+  }
 });
-// CONCATENATED MODULE: ./src/views/cinema/detail.vue?vue&type=script&lang=js&
- /* harmony default export */ var cinema_detailvue_type_script_lang_js_ = (detailvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/views/city/list.vue?vue&type=script&lang=js&
+ /* harmony default export */ var city_listvue_type_script_lang_js_ = (listvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("KHd+");
 
-// CONCATENATED MODULE: ./src/views/cinema/detail.vue
+// CONCATENATED MODULE: ./src/views/city/list.vue
 
 
 
@@ -286,7 +202,7 @@ var componentNormalizer = __webpack_require__("KHd+");
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  cinema_detailvue_type_script_lang_js_,
+  city_listvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
@@ -296,8 +212,89 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-component.options.__file = "detail.vue"
-/* harmony default export */ var detail = __webpack_exports__["default"] = (component.exports);
+component.options.__file = "list.vue"
+/* harmony default export */ var list = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "dRp0":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("4d7F");
+/* harmony import */ var babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("vDqi");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var element_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("XJYT");
+/* harmony import */ var element_ui__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(element_ui__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var env = "dev";
+// 设置基本路径
+switch (env) {
+  case "dev":
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = "http://127.0.0.1:3000/admin";
+    break;
+  case "test":
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = "http://132.232.87.95:3000/admin";
+    break;
+  case "prod":
+  // todo
+}
+
+var get = function get(url, params) {
+  params = params || {};
+  return new babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url, {
+      params: params
+    }).then(function (res) {
+      if (res.data.code === "666") {
+        resolve(res.data);
+      } else {
+        Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
+          message: res.data.msg,
+          type: "error",
+          duration: 5 * 1000
+        });
+      }
+    }).catch(function (error) {
+      Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
+        message: "网络异常",
+        type: "error",
+        duration: 5 * 1000
+      });
+    });
+  });
+};
+var post = function post(url, params) {
+  params = params || {};
+  return new babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(url, params).then(function (res) {
+      if (res.data.code === "666") {
+        resolve(res.data);
+      } else {
+        Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
+          message: res.data.msg,
+          type: "error",
+          duration: 5 * 1000
+        });
+      }
+    }).catch(function (error) {
+      Object(element_ui__WEBPACK_IMPORTED_MODULE_2__["Message"])({
+        message: "网络异常",
+        type: "error",
+        duration: 5 * 1000
+      });
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  get: get,
+  post: post
+});
 
 /***/ }),
 

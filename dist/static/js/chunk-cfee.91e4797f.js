@@ -6,12 +6,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/city/edit.vue?vue&type=template&id=4de05fae&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/city/edit.vue?vue&type=template&id=21bc5e40&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("添加城市")])]),_vm._v(" "),_c('el-form',{ref:"form",staticStyle:{"width":"60%"}},[_c('el-form-item',{attrs:{"label":"城市Id","label-width":"120px"}},[_c('el-input',{attrs:{"placeholder":""},model:{value:(_vm.cityId),callback:function ($$v) {_vm.cityId=$$v},expression:"cityId"}})],1),_vm._v(" "),_c('el-form-item',{attrs:{"label":"城市名称","label-width":"120px"}},[_c('el-input',{attrs:{"placeholder":"请输入城市名称"},model:{value:(_vm.name),callback:function ($$v) {_vm.name=$$v},expression:"name"}})],1),_vm._v(" "),_c('el-form-item',{attrs:{"label":"城市拼音","label-width":"120px"}},[_c('el-input',{attrs:{"placeholder":"请输入城市拼音"},model:{value:(_vm.pinyin),callback:function ($$v) {_vm.pinyin=$$v},expression:"pinyin"}})],1),_vm._v(" "),_c('el-form-item',{attrs:{"label-width":"120px","label":"热门城市"}},[_c('el-switch',{attrs:{"active-text":_vm.isHot?'是':'否'},model:{value:(_vm.isHot),callback:function ($$v) {_vm.isHot=$$v},expression:"isHot"}})],1),_vm._v(" "),_c('el-form-item',{staticStyle:{"text-align":"center"}},[_c('el-button',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],attrs:{"type":"primary"},on:{"click":_vm.submit}},[_vm._v("提交")])],1)],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/city/edit.vue?vue&type=template&id=4de05fae&
+// CONCATENATED MODULE: ./src/views/city/edit.vue?vue&type=template&id=21bc5e40&
 
 // EXTERNAL MODULE: ./src/utils/http.js
 var http = __webpack_require__("dRp0");

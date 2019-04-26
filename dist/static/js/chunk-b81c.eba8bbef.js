@@ -918,12 +918,12 @@ var getDetail = function getDetail(cinemaId) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/list.vue?vue&type=template&id=42c9c564&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/cinema/list.vue?vue&type=template&id=688da50f&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-card',{staticClass:"box-card"},[_c('div',{attrs:{"slot":"header"},slot:"header"},[_c('span',[_vm._v("影片列表")])]),_vm._v(" "),_c('el-table',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],staticStyle:{"width":"100%"},attrs:{"data":_vm.list,"stripe":""}},[_c('el-table-column',{attrs:{"prop":"name","label":"影院名称"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"address","label":"影院地址"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"Distance","label":"距离"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"lowPrice","label":"最低价"}}),_vm._v(" "),_c('el-table-column',{attrs:{"prop":"gpsAddress","label":"经纬度"}}),_vm._v(" "),_c('el-table-column',{attrs:{"fixed":"right","label":"操作","width":"150"},scopedSlots:_vm._u([{key:"default",fn:function(scope){return [_c('el-button',{attrs:{"type":"text","size":"small"},on:{"click":function($event){_vm.del(scope.row)}}},[_vm._v("删除")]),_vm._v(" "),_c('el-button',{attrs:{"type":"text","size":"small"}},[_c('router-link',{attrs:{"to":("/film/add/" + (scope.row.cinemaId))}},[_vm._v("添加影片")])],1),_vm._v(" "),_c('el-button',{attrs:{"type":"text","size":"small"}},[_c('router-link',{attrs:{"to":("/cinema/detail?cinemaId=" + (scope.row.cinemaId))}},[_vm._v("详情")])],1)]}}])})],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/cinema/list.vue?vue&type=template&id=42c9c564&
+// CONCATENATED MODULE: ./src/views/cinema/list.vue?vue&type=template&id=688da50f&
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/regenerator/index.js
 var regenerator = __webpack_require__("14Xm");
