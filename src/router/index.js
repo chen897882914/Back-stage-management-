@@ -23,26 +23,42 @@ import Layout from '../views/layout/Layout'
   }
 **/
 
-import cityRouter from './modules/cityRouter'
-import districtRouter from './modules/districtRouter'
-import demoRouter from './modules/demoRouter'
-import filmRouter from './modules/filmRouter'
-import cinemaRouter from './modules/cinemaRouter'
-import scheduleRouter from './modules/scheduleRouter'
-export const constantRouterMap = [
-  {
+export const constantRouterMap = [{
     path: '/',
     component: Layout,
     redirect: '/index',
     name: 'index',
-    children: [
-      {
-        path: 'index',
+    children: [{
+      path: 'index',
+      meta: {
+        title: '卖座后台管理系统',
+        icon: 'home'
+      },
+      component: () => import('@/views/dashboard/index')
+    }]
+  },
+  {
+    path: '/demo',
+    component: Layout,
+    meta: {
+      title: 'demo',
+      icon: 'demo'
+    },
+    children: [{
+        path: 'demo1',
         meta: {
-          title: '卖座后台管理系统',
-          icon: 'home'
+          title: 'demo',
+          icon: 'demo'
         },
-        component: () => import('@/views/dashboard/index')
+        component: () => import('@/views/demo/demo1')
+      },
+      {
+        path: 'demo2',
+        meta: {
+          title: 'demo',
+          icon: 'demo'
+        },
+        component: () => import('@/views/demo/demo2')
       }
     ]
   },
@@ -51,18 +67,17 @@ export const constantRouterMap = [
     component: () => import('@/views/login/index'),
     hidden: true
   },
-
-  cityRouter,
-  districtRouter,
-  cinemaRouter,
-  filmRouter,
-  scheduleRouter,
-  demoRouter,
-  { path: '*', redirect: '/404', hidden: true }
+  {
+    path: '*',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 
 export default new Router({
   // mode: 'history', //后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0
+  }),
   routes: constantRouterMap
 })
