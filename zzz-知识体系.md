@@ -14,7 +14,7 @@
 
 #### 详情
 
-1. 使用修改后的vue-admin模版 
+1. [使用修改后的vue-admin模版](git@gitee.com:dc_teach/maizuo-admin-template.git) 
 2. axios的设置
    1. get和post请求
    2. 拦截器
