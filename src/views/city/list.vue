@@ -61,7 +61,7 @@ export default {
       // 当前页
       pageNum: 1,
       // 每页条数
-      pageSize: 5,
+      pageSize: 6,
       // 总条数
       total: 0
     };
@@ -91,6 +91,7 @@ export default {
     // 在数据库删除城市信息
     async delCity(index, cityId) {
       const url = '/city/delById';
+      // post请求结构
       const data = {
         cityId
       };
@@ -107,6 +108,7 @@ export default {
     async getList(pageNum) {
       // const pageNum = this.pageNum;
       // const pageSize = this.pageSize;
+      // get请求结构提取参数
       const data = {
         params: {
           pageNum,

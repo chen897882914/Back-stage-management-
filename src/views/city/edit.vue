@@ -37,6 +37,7 @@ export default {
       // 获取cityid
       const cityId = this.$route.params.cityId;
       const url = '/city/findById';
+      // get请求结构
       const data = {
         params: {
           cityId
@@ -45,8 +46,9 @@ export default {
       const res = await this.$axios.get(url, data);
       this.form = res.city;
     },
-
+    // 提交编辑城市
     async addCity() {
+      // 获取数据
       const url = '/city/edit';
       this.loading = true;
       const data = this.form;
@@ -57,6 +59,7 @@ export default {
           type: 'success'
         });
         this.loading = false;
+        this.$router.go(-1);
         console.log(res);
       } catch (error) {
         console.log(error);
