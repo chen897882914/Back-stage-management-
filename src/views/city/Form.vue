@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-form ref="form" label-width="80px" size="mini">
-      <el-form-item v-if="form.cityId" label="城市名称">
-        <el-input :value="form.cityId" placeholder="输入城市名称" disabled class="input"/>
+      <el-form-item v-if="form.cityId" label="城市编码">
+        <el-input :value="form.cityId" disabled class="input"/>
       </el-form-item>
 
       <el-form-item label="城市名称">
