@@ -1,12 +1,12 @@
 <template>
-  <div>{{list}}</div>
+  <div>{{ list }}</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      list: ""
+      list: ''
     };
   },
   created() {
@@ -15,8 +15,8 @@ export default {
 
   methods: {
     async getList() {
-      let url = "/city/getList";
-      let res = await this.$axios.get(url);
+      const url = '/city/getList';
+      const res = await this.$axios.get(url);
       console.log(res);
       this.list = JSON.stringify(res);
     }

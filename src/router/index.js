@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
 // in development-env not use lazy-loading, because lazy-loading too many pages will cause webpack hot update too slow. so only in production use lazy-loading;
 // detail: https://panjiachen.github.io/vue-element-admin-site/#/lazy-loading
 
-Vue.use(Router)
+Vue.use(Router);
 
 /* Layout */
-import Layout from '../views/layout/Layout'
+import Layout from '../views/layout/Layout';
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -24,55 +24,93 @@ import Layout from '../views/layout/Layout'
 **/
 
 export const constantRouterMap = [{
-    path: '/',
-    component: Layout,
-    redirect: '/index',
-    name: 'index',
-    children: [{
-      path: 'index',
-      meta: {
-        title: '卖座后台管理系统',
-        icon: 'home'
-      },
-      component: () => import('@/views/dashboard/index')
-    }]
-  },
-  {
-    path: '/demo',
-    component: Layout,
+  path: '/',
+  component: Layout,
+  redirect: '/index',
+  name: 'index',
+  children: [{
+    path: 'index',
     meta: {
-      title: 'demo',
-      icon: 'demo'
+      title: '卖座后台管理系统',
+      icon: 'home'
     },
-    children: [{
-        path: 'demo1',
-        meta: {
-          title: 'demo',
-          icon: 'demo'
-        },
-        component: () => import('@/views/demo/demo1')
+    component: () => import('@/views/dashboard/index')
+  }]
+},
+{
+  path: '/demo',
+  component: Layout,
+  meta: {
+    title: 'demo',
+    icon: 'demo'
+  },
+  children: [
+    {
+      path: 'demo1',
+      meta: {
+        title: 'demo1',
+        icon: 'demo'
       },
-      {
-        path: 'demo2',
-        meta: {
-          title: 'demo',
-          icon: 'demo'
-        },
-        component: () => import('@/views/demo/demo2')
-      }
-    ]
+      component: () => import('@/views/demo/demo1')
+    },
+    {
+      path: 'demo2',
+      meta: {
+        title: 'demo2',
+        icon: 'demo'
+      },
+      component: () => import('@/views/demo/demo2')
+    }
+  ]
+},
+  // 城市列表
+{
+  path: '/city',
+  component: Layout,
+  meta: {
+    title: '城市',
+    icon: 'demo'
   },
-  {
-    path: '/login',
-    component: () => import('@/views/login/index'),
-    hidden: true
-  },
-  {
-    path: '*',
-    redirect: '/404',
-    hidden: true
-  }
-]
+  children: [
+    {
+      path: 'list',
+      meta: {
+        title: '城市列表',
+        icon: 'demo'
+      },
+      component: () => import('@/views/city/list')
+    },
+    {
+      path: 'add',
+      meta: {
+        title: '添加',
+        icon: 'demo'
+      },
+      component: () => import('@/views/city/add')
+    },
+    {
+      path: 'edit/:cityId',
+      hidden: true,
+      meta: {
+        title: '编辑',
+        icon: 'demo'
+      },
+      component: () => import('@/views/city/edit')
+    }
+  ]
+},
+{
+  path: '/login',
+  component: () => import('@/views/login/index'),
+  hidden: true
+},
+{
+  path: '*',
+  redirect: '/404',
+  hidden: true
+}
+
+];
 
 export default new Router({
   // mode: 'history', //后端支持可开
@@ -80,4 +118,4 @@ export default new Router({
     y: 0
   }),
   routes: constantRouterMap
-})
+});
