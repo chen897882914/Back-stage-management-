@@ -1,12 +1,18 @@
 <template>
   <div>
-    <Form :form="form"/>
-    <el-form ref="form" label-width="80px" size="mini">
-      <el-form-item size="large">
-        <el-button :loading = "loading" type="primary" @click="addCity">立即创建</el-button>
-        <el-button>取消</el-button>
-      </el-form-item>
-    </el-form>
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span>添加城市</span>
+      </div>
+      <!-- 添加城市表单 -->
+      <Form :form="form"/>
+      <el-form ref="form" label-width="80px" size="mini">
+        <el-form-item size="large">
+          <el-button :loading = "loading" type="primary" @click="addCity">立即创建</el-button>
+          <el-button>取消</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
   </div>
 </template>
 
