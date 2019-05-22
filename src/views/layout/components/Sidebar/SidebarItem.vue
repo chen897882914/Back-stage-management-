@@ -42,13 +42,13 @@
 </template>
 
 <script>
-import path from "path";
-import { isExternal } from "@/utils";
-import Item from "./Item";
-import AppLink from "./Link";
+import path from 'path';
+import { isExternal } from '@/utils';
+import Item from './Item';
+import AppLink from './Link';
 
 export default {
-  name: "SidebarItem",
+  name: 'SidebarItem',
   components: { Item, AppLink },
   props: {
     // route object
@@ -62,7 +62,7 @@ export default {
     },
     basePath: {
       type: String,
-      default: ""
+      default: ''
     }
   },
   data() {
@@ -89,7 +89,7 @@ export default {
 
       // Show parent if there are no child router to display
       if (showingChildren.length === 0) {
-        this.onlyOneChild = { ...parent, path: "", noShowingChildren: true };
+        this.onlyOneChild = { ...parent, path: '', noShowingChildren: true };
         return true;
       }
 

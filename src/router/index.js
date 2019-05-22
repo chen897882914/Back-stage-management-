@@ -67,35 +67,120 @@ export const constantRouterMap = [{
 {
   path: '/city',
   component: Layout,
+  name: 'city',
   meta: {
     title: '城市',
-    icon: 'demo'
+    icon: 'city'
   },
   children: [
     {
       path: 'list',
+      name: 'city-list',
       meta: {
         title: '城市列表',
-        icon: 'demo'
+        icon: 'list'
       },
       component: () => import('@/views/city/list')
     },
     {
       path: 'add',
+      name: 'city-add',
       meta: {
-        title: '添加',
-        icon: 'demo'
+        title: '添加城市',
+        icon: 'add'
       },
       component: () => import('@/views/city/add')
     },
     {
       path: 'edit/:cityId',
       hidden: true,
+      name: 'city-edit',
       meta: {
-        title: '编辑',
+        title: '编辑城市',
         icon: 'demo'
       },
       component: () => import('@/views/city/edit')
+    }
+  ]
+},
+// 区域列表
+{
+  path: '/region',
+  component: Layout,
+  name: 'region',
+  meta: {
+    title: '区域',
+    icon: 'region'
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'region-list',
+      meta: {
+        title: '区域列表',
+        icon: 'region'
+      },
+      component: () => import('@/views/region/list')
+    },
+    {
+      path: 'add/:cityId/:cityName',
+      name: 'region-add',
+      hidden: true,
+      meta: {
+        title: '添加区域',
+        icon: 'add'
+      },
+      component: () => import('@/views/region/add')
+    },
+    {
+      path: 'edit/:areaId',
+      hidden: true,
+      name: 'region-edit',
+      meta: {
+        title: '编辑区域',
+        icon: 'edit'
+      },
+      component: () => import('@/views/region/edit')
+    }
+  ]
+},
+// 影院模块
+{
+  path: '/cinema',
+  component: Layout,
+  name: 'cinema',
+  meta: {
+    title: '影院',
+    icon: 'cinema'
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'cinema-list',
+      meta: {
+        title: '影院列表',
+        icon: 'list'
+      },
+      component: () => import('@/views/cinema/list')
+    },
+    {
+      path: 'add',
+      name: 'cinema-add',
+      meta: {
+        title: '添加影院',
+        icon: 'add'
+      },
+      component: () => import('@/views/cinema/add')
+    },
+    {
+      path: 'edit/:cinemaId',
+      name: 'cinema-edit',
+      hidden: true,
+      meta: {
+        title: '编辑影院',
+        icon: 'edit'
+      },
+      component: () => import('@/views/cinema/edit')
     }
   ]
 },

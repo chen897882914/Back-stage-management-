@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Dashboard',
@@ -16,7 +16,7 @@ export default {
       'roles'
     ])
   }
-}
+};
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>

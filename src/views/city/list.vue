@@ -6,8 +6,17 @@
       </div>
       <!-- 城市列表 -->
       <el-table
+        v-loading="tableLoading"
         :data="cityList"
-        style="width: 100%; margin-bottom: 20px;">
+        element-loading-text="拼命加载中"
+        element-loading-spinner="el-icon-loading"
+        element-loading-background="rgba(0, 0, 0, 0.8)"
+        style="margin-bottom: 20px;">
+        <el-table-column
+          prop="cityId"
+          label="城市编码称"
+          align="center"
+          width="210"/>
         <el-table-column
           prop="name"
           label="城市名称"
@@ -19,16 +28,29 @@
           align="center"
           width="180"/>
         <el-table-column
+          :formatter="time"
+          prop="create"
+          label="添加时间"
+          align="center"
+          width="180"/>
+        <el-table-column
           :formatter="formatter"
           prop="isHot"
           align="center"
-          label="是否热门"/>
+          label="是否热门"
+          width="90"/>
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
             <router-link :to="`/city/edit/${scope.row.cityId}`">
               <el-button
                 size="mini">
                 编辑
+              </el-button>
+            </router-link>
+            <router-link :to="`/region/add/${scope.row.cityId}/${scope.row.name}`">
+              <el-button
+                size="mini">
+                添加地区
               </el-button>
             </router-link>
             <el-button
@@ -63,7 +85,8 @@ export default {
       // 每页条数
       pageSize: 6,
       // 总条数
-      total: 0
+      total: 0,
+      tableLoading: false
     };
   },
   created() {
@@ -95,8 +118,9 @@ export default {
       const data = {
         cityId
       };
+      // eslint-disable-next-line no-unused-vars
       const res = await this.$axios.post(url, data);
-      console.log(res);
+      // console.log(res);
       this.$message({
         type: 'success',
         message: '删除成功'
@@ -116,8 +140,10 @@ export default {
         }
       };
       const url = '/city/getList';
+      this.tableLoading = true;
       const res = await this.$axios.get(url, data);
-      console.log(res);
+      this.tableLoading = false;
+      // console.log(res);
       this.cityList = res.cities;
       this.total = res.total;
     },
@@ -125,6 +151,19 @@ export default {
     formatter(row, column, cellValue, index) {
       const text = cellValue ? '是' : '否';
       return text;
+    },
+    // 格式化时间并重新赋值
+    time(row, column, cellValue, index) {
+      const time = cellValue;
+      const data = new Date(time);
+      const Y = data.getFullYear();
+      let M = data.getMonth() + 1;
+      let D = data.getDate();
+      const H = data.getHours();
+      const Min = data.getMinutes();
+      M = M < 10 ? '0' + M : M;
+      D = D < 10 ? '0' + D : D;
+      return `${Y}-${M}-${D}  ${H}:${Min}`;
     },
     currentPage(pageNum) {
       this.getList(pageNum);

@@ -54,38 +54,38 @@
 </template>
 
 <script>
-import { isvalidUsername } from "@/utils/validate";
+import { isvalidUsername } from '@/utils/validate';
 
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!isvalidUsername(value)) {
-        callback(new Error("请输入正确的用户名"));
+        callback(new Error('请输入正确的用户名'));
       } else {
         callback();
       }
     };
     const validatePass = (rule, value, callback) => {
       if (value.length < 5) {
-        callback(new Error("密码不能小于5位"));
+        callback(new Error('密码不能小于5位'));
       } else {
         callback();
       }
     };
     return {
       loginForm: {
-        username: "admin",
-        password: "admin"
+        username: 'admin',
+        password: 'admin'
       },
       loginRules: {
         username: [
-          { required: true, trigger: "blur", validator: validateUsername }
+          { required: true, trigger: 'blur', validator: validateUsername }
         ],
-        password: [{ required: true, trigger: "blur", validator: validatePass }]
+        password: [{ required: true, trigger: 'blur', validator: validatePass }]
       },
       loading: false,
-      pwdType: "password",
+      pwdType: 'password',
       redirect: undefined
     };
   },
@@ -100,10 +100,10 @@ export default {
   mounted() {},
   methods: {
     showPwd() {
-      if (this.pwdType === "password") {
-        this.pwdType = "";
+      if (this.pwdType === 'password') {
+        this.pwdType = '';
       } else {
-        this.pwdType = "password";
+        this.pwdType = 'password';
       }
     },
     handleLogin() {
@@ -111,16 +111,16 @@ export default {
         if (valid) {
           this.loading = true;
           this.$store
-            .dispatch("Login", this.loginForm)
+            .dispatch('Login', this.loginForm)
             .then(() => {
               this.loading = false;
-              this.$router.push({ path: this.redirect || "/" });
+              this.$router.push({ path: this.redirect || '/' });
             })
             .catch(() => {
               this.loading = false;
             });
         } else {
-          console.log("error submit!!");
+          console.log('error submit!!');
           return false;
         }
       });

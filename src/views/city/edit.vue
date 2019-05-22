@@ -9,7 +9,7 @@
       <el-form ref="form" label-width="80px" size="mini">
         <el-form-item size="large">
           <el-button :loading = "loading" type="primary" @click="addCity" >提交</el-button>
-          <el-button>取消</el-button>
+          <el-button><router-link to="/city/list">取消</router-link></el-button>
         </el-form-item>
       </el-form>
     </el-card>
