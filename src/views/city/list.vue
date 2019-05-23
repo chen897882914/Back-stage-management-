@@ -11,67 +11,42 @@
         element-loading-text="拼命加载中"
         element-loading-spinner="el-icon-loading"
         element-loading-background="rgba(0, 0, 0, 0.8)"
-        style="margin-bottom: 20px;">
-        <el-table-column
-          prop="cityId"
-          label="城市编码称"
-          align="center"
-          width="210"/>
-        <el-table-column
-          prop="name"
-          label="城市名称"
-          align="center"
-          width="180"/>
-        <el-table-column
-          prop="pinyin"
-          label="城市拼音"
-          align="center"
-          width="180"/>
-        <el-table-column
-          :formatter="time"
-          prop="create"
-          label="添加时间"
-          align="center"
-          width="180"/>
+        style="margin-bottom: 20px;"
+      >
+        <el-table-column prop="cityId" label="城市编码称" align="center" width="210"/>
+        <el-table-column prop="name" label="城市名称" align="center" width="180"/>
+        <el-table-column prop="pinyin" label="城市拼音" align="center" width="180"/>
+        <el-table-column :formatter="time" prop="create" label="添加时间" align="center" width="180"/>
         <el-table-column
           :formatter="formatter"
           prop="isHot"
           align="center"
           label="是否热门"
-          width="90"/>
+          width="90"
+        />
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
             <router-link :to="`/city/edit/${scope.row.cityId}`">
-              <el-button
-                size="mini">
-                编辑
-              </el-button>
+              <el-button size="mini">编辑</el-button>
             </router-link>
             <router-link :to="`/region/add/${scope.row.cityId}/${scope.row.name}`">
-              <el-button
-                size="mini">
-                添加地区
-              </el-button>
+              <el-button size="mini">添加地区</el-button>
             </router-link>
-            <el-button
-              size="mini"
-              type="danger"
-              @click="delable(scope.$index, scope.row.cityId)">
-              删除
-            </el-button>
+            <el-button size="mini" type="danger" @click="delable(scope.$index, scope.row.cityId)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
     </el-card>
     <!-- 分页 -->
     <el-pagination
+      v-if="pageSize>total"
       :total="total"
       :page-size="pageSize"
       background
       layout="prev, pager, next"
       class="page"
-      @current-change="currentPage"/>
-
+      @current-change="currentPage"
+    />
   </div>
 </template>
 
@@ -100,16 +75,18 @@ export default {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
-      }).then(() => {
-        // 点击确定时触发
-        this.delCity(index, cityId);
-      }).catch(() => {
-        // 点击取消时触发
-        this.$message({
-          type: 'info',
-          message: '已取消删除'
+      })
+        .then(() => {
+          // 点击确定时触发
+          this.delCity(index, cityId);
+        })
+        .catch(() => {
+          // 点击取消时触发
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          });
         });
-      });
     },
     // 在数据库删除城市信息
     async delCity(index, cityId) {
@@ -173,8 +150,7 @@ export default {
 </script>
 
 <style scoped>
-
-.clearfix>span{
+.clearfix > span {
   margin-left: 55px;
 }
 .box-card {

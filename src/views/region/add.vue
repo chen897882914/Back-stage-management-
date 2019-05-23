@@ -8,7 +8,7 @@
       <Form :form="form"/>
       <el-form ref="form" label-width="80px" size="mini">
         <el-form-item size="large">
-          <el-button :loading = "loading" type="primary" @click="addCity">立即创建</el-button>
+          <el-button :loading="loading" type="primary" @click="addCity">添加地区</el-button>
           <el-button @click="geyOut">取消</el-button>
         </el-form-item>
       </el-form>

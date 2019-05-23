@@ -66,6 +66,7 @@ export const constantRouterMap = [{
   // 城市列表
 {
   path: '/city',
+  redirect: '/city/list',
   component: Layout,
   name: 'city',
   meta: {
@@ -106,6 +107,7 @@ export const constantRouterMap = [{
 // 区域列表
 {
   path: '/region',
+  redirect: '/region/list',
   component: Layout,
   name: 'region',
   meta: {
@@ -147,6 +149,7 @@ export const constantRouterMap = [{
 // 影院模块
 {
   path: '/cinema',
+  redirect: '/cinema/list',
   component: Layout,
   name: 'cinema',
   meta: {
@@ -181,6 +184,78 @@ export const constantRouterMap = [{
         icon: 'edit'
       },
       component: () => import('@/views/cinema/edit')
+    }
+  ]
+},
+// 轮播图模块
+{
+  path: '/banner',
+  redirect: '/banner/list',
+  component: Layout,
+  name: 'banner',
+  meta: {
+    title: '轮播图',
+    icon: 'banner'
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'banner-list',
+      meta: {
+        title: '轮播图列表',
+        icon: 'list'
+      },
+      component: () => import('@/views/banner/list')
+    },
+    {
+      path: 'add',
+      name: 'banner-add',
+      meta: {
+        title: '添加图片',
+        icon: 'add'
+      },
+      component: () => import('@/views/banner/add')
+    }
+  ]
+},
+// 电影模块
+{
+  path: '/mover',
+  redirect: '/mover/list',
+  component: Layout,
+  name: 'mover',
+  meta: {
+    title: '电影',
+    icon: 'mover'
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'mover-list',
+      meta: {
+        title: '电影列表',
+        icon: 'list'
+      },
+      component: () => import('@/views/mover/list')
+    },
+    {
+      path: 'add',
+      name: 'mover-add',
+      meta: {
+        title: '添加电影',
+        icon: 'add'
+      },
+      component: () => import('@/views/mover/add')
+    },
+    {
+      path: 'edit/:filmId',
+      name: 'mover-edit',
+      hidden: true,
+      meta: {
+        title: '编辑电影',
+        icon: 'edit'
+      },
+      component: () => import('@/views/mover/edit')
     }
   ]
 },

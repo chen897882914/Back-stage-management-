@@ -1,6 +1,7 @@
 <template>
   <div>
     <el-form ref="form" label-width="80px" size="mini">
+
       <el-form-item label="城市编码">
         <el-input :value="form.cityId" disabled class="input"/>
       </el-form-item>

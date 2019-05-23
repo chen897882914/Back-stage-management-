@@ -10,7 +10,7 @@
       <Choice :form="form"/>
       <!-- 按钮 -->
       <el-form-item class="btn">
-        <el-button :loading="loading" type="primary" @click="onSubmit">提交</el-button>
+        <el-button :loading="loading" type="primary" @click="onSubmit">确认编辑</el-button>
         <el-button @click="toTop">取消</el-button>
       </el-form-item>
     </el-form>
@@ -74,8 +74,8 @@ export default {
 </script>
 
 <style scoped>
-  .btn {
-    display: flex;
-    justify-content: center;
-  }
+.btn {
+  display: flex;
+  justify-content: center;
+}
 </style>
