@@ -63,7 +63,7 @@ export const constantRouterMap = [{
     }
   ]
 },
-  // 城市列表
+// 城市列表
 {
   path: '/city',
   redirect: '/city/list',

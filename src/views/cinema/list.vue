@@ -10,47 +10,33 @@
         element-loading-text="拼命加载中"
         element-loading-spinner="el-icon-loading"
         element-loading-background="rgba(0, 0, 0, 0.8)"
-        style="width: 100%">
-        <el-table-column
-          prop="name"
-          align="center"
-          label="影院名称"
-          width="180"/>
-        <el-table-column
-          prop="address"
-          align="center"
-          label="影院地址"
-          width="180"/>
-        <el-table-column
-          prop="lowPrice"
-          align="center"
-          label="最低价"/>
-        <el-table-column
-          prop="cityId"
-          align="center"
-          width="210"
-          label="城市编码"/>
-        <el-table-column
-          prop="areaId"
-          align="center"
-          label="区域编码"
-          width="210"/>
+        style="width: 100%"
+      >
+        <el-table-column prop="name" align="center" label="影院名称" width="180"/>
+        <el-table-column prop="address" align="center" label="影院地址" width="180"/>
+        <el-table-column prop="lowPrice" align="center" label="最低价"/>
+        <el-table-column prop="cityId" align="center" width="210" label="城市编码"/>
+        <el-table-column prop="areaId" align="center" label="区域编码" width="210"/>
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
             <router-link :to="`/cinema/edit/${scope.row.cinemaId}`">
-              <el-button
-                size="mini">
-                编辑
-              </el-button>
+              <el-button size="mini">编辑</el-button>
             </router-link>
-            <el-button
-              size="mini"
-              type="danger">
-              删除</el-button>
+            <el-button size="mini" type="danger">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
     </el-card>
+    <!-- 分页 -->
+    <el-pagination
+      v-if="pageSize<total"
+      :total="total"
+      :page-size="pageSize"
+      background
+      layout="prev, pager, next"
+      class="page"
+      @current-change="currentPage"
+    />
   </div>
 </template>
 
@@ -59,19 +45,26 @@ export default {
   data() {
     return {
       tableData: [],
-      tableLoading: false
+      tableLoading: false,
+      // 当前页
+      pageNum: 1,
+      // 每页条数
+      pageSize: 6,
+      // 总条数
+      total: 0
     };
   },
   created() {
-    this.getList();
+    this.getList(this.pageNum, this.pageSize);
   },
   methods: {
-    async getList() {
+    async getList(pageNum) {
       const url = '/cinema/getList';
       this.tableLoading = true;
       const res = await this.$axios.get(url);
       this.tableLoading = false;
       this.tableData = res.cinemas;
+      this.total = res.total;
       console.log(res);
     },
     currentPage(pageNum) {
@@ -81,7 +74,7 @@ export default {
 };
 </script>
 <style scoped>
-.clearfix>span{
+.clearfix > span {
   margin-left: 55px;
 }
 .box-card {

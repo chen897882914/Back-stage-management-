@@ -28,13 +28,17 @@
             <router-link :to="`/mover/edit/${scope.row.filmId}`">
               <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
             </router-link>
-            <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+            <el-button
+              size="mini"
+              type="danger"
+              @click="handleDelete(scope.$index, scope.row.filmId)"
+            >删除</el-button>
           </template>
         </el-table-column>
       </el-table>
     </el-card>
     <el-pagination
-      v-if="pageSize<total && pageSize === total"
+      v-if="pageSize<total"
       :total="total"
       :page-size="pageSize"
       background
@@ -89,6 +93,35 @@ export default {
     // },
     currentPage(pageNum) {
       this.getList(pageNum);
+    },
+    async handleDelete(index, filmId) {
+      this.$confirm('确定删除此电影吗', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      })
+        .then(() => {
+          this.delMover(index, filmId);
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          });
+        });
+    },
+    async delMover(index, filmId) {
+      const url = '/film/delById';
+      const data = {
+        filmId
+      };
+      const res = await this.$axios.post(url, data);
+      console.log(res);
+      this.$message({
+        type: 'success',
+        message: '删除成功'
+      });
+      this.tableData.splice(index, 1);
     }
   }
 };

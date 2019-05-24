@@ -35,7 +35,7 @@
       </template>
     </el-card>
     <el-pagination
-      v-if="pageSize<total && pageSize === total"
+      v-if="pageSize<total"
       :total="total"
       :page-size="pageSize"
       background

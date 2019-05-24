@@ -39,7 +39,7 @@
     </el-card>
     <!-- 分页 -->
     <el-pagination
-      v-if="pageSize>total"
+      v-if="pageSize<total"
       :total="total"
       :page-size="pageSize"
       background
